@@ -1,0 +1,17 @@
+﻿<Application
+    x:Class="SyncNotifySender.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:SyncNotifySender"
+    xmlns:sys="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+    StartupUri="Pages/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemeResources />
+                <ui:XamlControlsResources />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
