@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Message.cs" />
     <Compile Include="Pages\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -98,8 +99,11 @@
     <PackageReference Include="Autoupdater.NET.Official">
       <Version>1.8.5</Version>
     </PackageReference>
+    <PackageReference Include="iNKORE.UI.WPF">
+      <Version>1.2.6</Version>
+    </PackageReference>
     <PackageReference Include="iNKORE.UI.WPF.Modern">
-      <Version>0.9.26.3</Version>
+      <Version>0.9.29</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>

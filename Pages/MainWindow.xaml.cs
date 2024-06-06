@@ -24,5 +24,15 @@ namespace SyncNotifySender
         {
             InitializeComponent();
         }
+
+        private void Help_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Send_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

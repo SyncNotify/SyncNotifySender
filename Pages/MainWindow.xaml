@@ -7,8 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
     Title="MainWindow"
-    Width="800"
-    Height="450"
+    Width="1100"
+    Height="600"
     mc:Ignorable="d">
     <Grid>
         <Grid.Resources>
@@ -26,6 +26,28 @@
         </Grid.Resources>
 
         <StackPanel>
+            <ui:CommandBar
+                Background="Transparent"
+                DefaultLabelPosition="Right"
+                IsOpen="False">
+                <ui:AppBarButton FontSize="99" Label="历史发送">
+                    <ui:AppBarButton.Icon>
+                        <ui:FontIcon FontSize="12" Icon="{x:Static ui:SegoeFluentIcons.History}" />
+                    </ui:AppBarButton.Icon>
+                </ui:AppBarButton>
+                <ui:AppBarButton Click="Help_Button_Click" Label="帮助">
+                    <ui:AppBarButton.Icon>
+                        <ui:FontIcon FontSize="12" Icon="{x:Static ui:SegoeFluentIcons.Help}" />
+                    </ui:AppBarButton.Icon>
+                </ui:AppBarButton>
+                <ui:AppBarButton Label="设置">
+                    <ui:AppBarButton.Icon>
+                        <ui:FontIcon FontSize="12" Icon="{x:Static ui:SegoeFluentIcons.Settings}" />
+                    </ui:AppBarButton.Icon>
+                </ui:AppBarButton>
+
+            </ui:CommandBar>
+
             <StackPanel>
                 <TextBlock
                     Margin="20,20,0,0"
@@ -39,12 +61,17 @@
                     VerticalAlignment="Center"
                     FontSize="15"
                     Text="弹出时间：" />
+
                 <RadioButton
                     Content="下课后弹出"
                     GroupName="SendTimeOption"
                     IsChecked="True" />
-                <RadioButton Content="立即生效" GroupName="SendTimeOption" />
-                <RadioButton Content="存档" GroupName="SendTimeOption" />
+
+                <RadioButton Content="取决于客户端" GroupName="SendTimeOption" />
+                <RadioButton Content="强制立即弹出" GroupName="SendTimeOption" />
+                <RadioButton Content="指定时间" GroupName="SendTimeOption" />
+                <RadioButton Content="仅存档，不弹出" GroupName="SendTimeOption" />
+
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock
@@ -79,9 +106,10 @@
                     <Button
                         Width="40"
                         Height="40"
-                        Margin="0,0,20,0">
+                        Margin="0,0,20,0"
+                        Click="Send_Button_Click">
                         <Button.Content>
-                            <ui:FontIcon FontSize="16" Glyph="{x:Static ui:SegoeIcons.SendFill}" />
+                            <ui:FontIcon FontSize="16" Icon="{x:Static ui:SegoeFluentIcons.SendFill}" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
